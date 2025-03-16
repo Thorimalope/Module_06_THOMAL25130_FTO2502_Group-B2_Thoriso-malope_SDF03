@@ -1,0 +1,164 @@
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+button{
+    height: 20px;
+    margin: 4px;
+    margin-left: 10px;
+    margin-top: 16px;
+    background: #fafafa;
+    border: 1px solid black;
+}
+
+ul{
+    display:flex;
+    gap: 10px;
+    list-style: non;
+    list-style-type: none;
+    
+}
+
+
+.container { 
+     display: flex; 
+    justify-content: center; 
+
+}
+
+.profile{
+    width: 600px;
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.profile-user-settings{
+    display: flex;
+}
+
+.profile-user-name{
+    font-weight: lighter;
+}
+
+.profile-bio{
+    margin-top: 30px;
+
+}
+
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    border: 8px solid #3dd28e;
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+.gallery{
+    width: 600px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5px;
+}
+
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  .gallery-item-info {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .post:hover .gallery-image {
+    filter: brightness(50%);
+  }
+  
+  .post:hover .overlay {
+    opacity: 1;
+  }
+
+  .loader{
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 50px;
+    border-bottom: 3px solid #fafafa;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+  }
+  
